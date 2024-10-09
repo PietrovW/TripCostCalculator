@@ -23,15 +23,15 @@ func (ep *createCalculateEndpoint) MapEndpoint() {
 	ep.CalculatesGroup.POST("", ep.handler())
 }
 
-// CreateProduct
-// @Tags Products
-// @Summary Create product
-// @Description Create new product item
+// CreateCalculate
+// @Tags Calculate
+// @Summary Create Calculate
+// @Description Create new Calculate item
 // @Accept json
-// @Produce json
-// @Param CreateCalculateRequestDto body creatingProductsDtos.CreateProductRequestDto true "Product data"
-// @Success 201 {object} creatingProductsDtos.CreateProductResponseDto
-// @Router /api/v1/products [post]
+// @Calculate json
+// @Param CreateCalculateRequestDto body creatingCalculateDtos.CreateCalculateRequestDto true "Calculate data"
+// @Success 201 {object} createCalculateRequestDto.CreateCalculateResponseDto
+// @Router /api/v1/calculates [post]
 func (ep *createCalculateEndpoint) handler() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
 		request := &dtos.CreateCalculateRequestDto{}
